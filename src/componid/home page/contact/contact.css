@@ -1,0 +1,98 @@
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.speacial-heading {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.theme-buttons {
+  margin-bottom: 20px;
+}
+
+.theme-button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #308446;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-input,
+.contact-textarea,
+.contact-button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.theme1 .contact-input,
+.theme1 .contact-textarea {
+  background-color: #f5f5dc;
+  color: #333;
+}
+
+.theme1 .contact-button {
+  background-color: #308446;
+  color: #fff;
+}
+
+.theme2 .contact-input,
+.theme2 .contact-textarea {
+  background-color: #00c100cd;
+  color: #333;
+}
+
+.theme2 .contact-button {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.theme3 .contact-input,
+.theme3 .contact-textarea {
+  background-color: #7bc99e;
+  color: #fff;
+}
+
+.theme3 .contact-button {
+  background-color: #256d34;
+  color: #fff;
+}
+
+.theme4 .contact-input,
+.contact-input:hover,
+.contact-textarea:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}

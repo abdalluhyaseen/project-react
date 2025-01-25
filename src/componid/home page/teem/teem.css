@@ -1,0 +1,94 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+}
+.team-page{
+    padding: 20px;
+    line-height: 1.6;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+   /* background-image: url(../img/5.jpg); */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: larger;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px 0;
+}
+
+.team {
+   
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.team-member {
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.team-member p {
+    margin-bottom: 5px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
