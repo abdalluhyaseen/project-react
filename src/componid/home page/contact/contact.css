@@ -3,23 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #d82a4e; /* Light gray background */
+  width: 91vh;
+  height: 70vh;
+  background-color: #fff; 
 }
 .contact-us-form {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* تأكيد أن الحاوية تأخذ عرض الشاشة بالكامل */
-  min-height: 100vh; /* لتغطية ارتفاع الشاشة بالكامل */
-  background-color: #f3f4f6; /* خلفية رمادية */
+  width: 100%; 
+  min-height: 50vh; 
+  background-color: #fff; 
 }
 
 .contact-us-form img {
-  width: 100vh; /* عرض الصورة */
-  height: 100vh; /* ارتفاع الصورة */
+  width: 100vh; 
+  height: 50vh;
 }
 
 /* Card Styling */
