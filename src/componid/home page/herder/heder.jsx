@@ -1,22 +1,37 @@
-// src/Header.js
-import React from "react";
-import "../About us/About.css";
-
 const Header = () => {
   return (
-    <header>
+    <header
+      style={{
+        zIndex: "1000",
+        height: "70px",
+        position: "fixed",
+        width: "100%",
+        backgroundColor: "#303030",
+        textAlign: "center",
+        color: "white",
+      }}
+    >
       <nav>
         <ul>
           <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html" className="active">
-              About Us
+            <a style={{ padding: "10px" }} href="index.html">
+              Home
             </a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
+            <a href="#About">About Us</a>
+          </li>
+          <li>
+            <a href="#Services">Services</a>
+          </li>
+          <li>
+            <a href="#Activity">Activity</a>
+          </li>
+          <li>
+            <a href="#Teem">Team</a>
+          </li>
+          <li>
+            <a href="#Contact">Contact</a>
           </li>
         </ul>
       </nav>

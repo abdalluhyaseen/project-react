@@ -1,98 +1,102 @@
-.contact-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-.speacial-heading {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.contact-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.theme-buttons {
-  margin-bottom: 20px;
-}
-
-.theme-button {
-  padding: 10px 15px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #308446;
-  font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.theme-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+/* Container Styling */
+.form-container {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #d82a4e; /* Light gray background */
+}
+.contact-us-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* تأكيد أن الحاوية تأخذ عرض الشاشة بالكامل */
+  min-height: 100vh; /* لتغطية ارتفاع الشاشة بالكامل */
+  background-color: #f3f4f6; /* خلفية رمادية */
 }
 
-.contact-input,
-.contact-textarea,
-.contact-button {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+.contact-us-form img {
+  width: 100vh; /* عرض الصورة */
+  height: 100vh; /* ارتفاع الصورة */
+}
+
+/* Card Styling */
+.form-card {
+  background: #ffffff;
+  /* border-radius: 16px; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 32px;
+  width: 600px;
+  max-width: 600px;
 }
 
-.theme1 .contact-input,
-.theme1 .contact-textarea {
-  background-color: #f5f5dc;
-  color: #333;
+/* Title */
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #1f2937; /* Dark gray text */
 }
 
-.theme1 .contact-button {
-  background-color: #308446;
-  color: #fff;
+/* Success Message */
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.theme2 .contact-input,
-.theme2 .contact-textarea {
-  background-color: #00c100cd;
-  color: #333;
+/* Form Group */
+.form-group {
+  margin-bottom: 16px;
 }
 
-.theme2 .contact-button {
-  background-color: #5cb85c;
-  color: #fff;
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  color: #4b5563; /* Gray text */
+  margin-bottom: 4px;
 }
 
-.theme3 .contact-input,
-.theme3 .contact-textarea {
-  background-color: #7bc99e;
-  color: #fff;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.theme3 .contact-button {
-  background-color: #256d34;
-  color: #fff;
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6366f1; /* Indigo border on focus */
 }
 
-.theme4 .contact-input,
-.contact-input:hover,
-.contact-textarea:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+/* Submit Button */
+.submit-button {
+  margin-left: 0;
+  width: 100%;
+  background: #d82a4e; /* Indigo background */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s 0.2s ease-in-out;
 }
 
-.contact-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+.submit-button:hover {
+  transform: scale(1.04); /* Darker indigo on hover */
+}
+
+.submit-button:focus {
+  outline: 2px solid #6366f1; /* Indigo outline on focus */
 }

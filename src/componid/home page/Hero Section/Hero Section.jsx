@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import Img1 from "../img/WhatsApp Image 2025-01-25 at 11.49.45_20cb8094.jpg";
-import Img2 from "../img/WhatsApp Image 2025-01-25 at 11.49.46_88584488.jpg";
-import Img3 from "../img/WhatsApp Image 2025-01-25 at 11.49.46_cd51bcbc.jpg";
 
 const SmartSchool = () => {
   const containerStyle = {

@@ -6,6 +6,11 @@
     min-height: 100vh;
     /* background: #221b33; */
 }
+.speacial-heading{
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
 
 .After-services{
     display: flex;
@@ -28,7 +33,7 @@
     position: relative;
     width: 350px;
     height: 280px;
-    background-color: #5e6376;
+    /* background-color: #5e6376; */
     background-image: '../images/1 (1).jpeg';
     border-radius: 20px;
     overflow: hidden;
@@ -47,7 +52,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    transition-delay: 0.25s;
+    transition: 1s;
   }
   
   .container_services .serviceBox:hover .icon {
@@ -62,7 +67,7 @@
   .container_services .serviceBox .icon ion-icon {
     font-size: 5em;
     color: #fff;
-    transition: 0.5s;
+    transition: 1s;
     transition-delay: 0.25s;
   }
   
@@ -74,12 +79,12 @@
   .container_services .serviceBox .content_services {
     position: relative;
     padding: 20px;
-    color: #fff;
+    color: white;
     text-align: center;
     margin-top: 100px;
     z-index: 1;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 1.5s;
     transition-delay: 0s;
   }
   

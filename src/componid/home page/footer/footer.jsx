@@ -5,20 +5,21 @@ export default function footer() {
   return (
     <div className="footer">
       <footer>
-        <p>&copy; 2025 SmartSchool. All rights reserved.</p>
         <div className="social-links">
-          <a href="https://www.linkedin.com" style={{ color: "#0072b1" }}>
-            <FaLinkedin />
-          </a>
-          <a href="https://www.github.com" style={{ color: "#333" }}>
-            <FaGithub />
-          </a>
-          <a href="https://reactjs.org" style={{ color: "#61dafb" }}>
-            <FaReact />
-          </a>
+          <div className="social-icons">
+            <a href="https://www.linkedin.com" style={{ color: "#0072b1" }}>
+              <FaLinkedin />
+            </a>
+            <a href="https://www.github.com" style={{ color: "#333" }}>
+              <FaGithub />
+            </a>
+            <a href="https://reactjs.org" style={{ color: "#61dafb" }}>
+              <FaReact />
+            </a>
+          </div>
         </div>
+          <p className="top">&copy; 2025 SmartSchool. All rights reserved.</p>
       </footer>
-      ;
     </div>
   );
 }

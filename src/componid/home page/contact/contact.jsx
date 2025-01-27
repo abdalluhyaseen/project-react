@@ -1,53 +1,87 @@
 import React, { useState } from "react";
 import "./contact.css";
+import Image from "../img/download.jpeg";
+const ContactUsForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-const ContactSection = () => {
-  const [theme, setTheme] = useState("theme1"); 
+  const [success, setSuccess] = useState(false);
 
-  const handleThemeChange = (themeName) => {
-    setTheme(themeName);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSuccess(true);
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <section className="contact-section">
-      <h2 className="contact-heading">Contact Us</h2>
-      <div className="theme-buttons">
-        <button
-          className="theme-button"
-          onClick={() => handleThemeChange("theme1")}
-        >
-          Theme 1
-        </button>
-        <button
-          className="theme-button"
-          onClick={() => handleThemeChange("theme2")}
-        >
-          Theme 2
-        </button>
-        <button
-          className="theme-button"
-          onClick={() => handleThemeChange("theme3")}
-        >
-          Theme 3
-        </button>
+    <div id="Contact" className="contact-us-form">
+      <div className="form-container">
+        <div className="form-card">
+          <h2 className="form-title">Contact Us</h2>
+
+          {success && (
+            <div className="success-message">
+              Thank you! Your message has been sent.
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="button" className="submit-button">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-      <form className={`contact-form ${theme}`}>
-        <input type="text" placeholder="Your Name" className="contact-input" />
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="contact-input"
-        />
-        <textarea
-          placeholder="Your Message"
-          className="contact-textarea"
-        ></textarea>
-        <button type="submit" className="contact-button">
-          Send Message
-        </button>
-      </form>
-    </section>
+      <img src={Image} alt="a" />
+    </div>
   );
 };
 
-export default ContactSection;
+export default ContactUsForm;
