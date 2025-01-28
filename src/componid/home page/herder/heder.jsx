@@ -14,7 +14,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a style={{ padding: "10px" }} href="index.html">
+            <a style={{ padding: "10px" }} href="/">
               Home
             </a>
           </li>
