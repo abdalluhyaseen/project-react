@@ -1,96 +1,158 @@
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
- 
+/* ONE */
+
+.box_brieff {
+  width: 1170px;
+  margin: 7% 19.5%;
 }
-
-.body {
-    height: 75vh;
-    font-family: Arial, sans-serif;
-    color: #fff ;
-    padding: 20px;
-    background-image: url('../img/789115b1dbe6a11262d4298e4d49d71d_1.jpg');
-    background-attachment: fixed;
-    background-size: 100% 100%;
-
+.icon_breif {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-bottom: 25px;
 }
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-   margin-left:20px;
-
+.icon_breif:hover {
+  background: rgb(87, 80, 80);
+  transition: 0.5s;
 }
-
-header nav ul li {
-    margin: 0 15px;
-
+.icon_breif i {
+  color: #000;
+  padding: 18px 0;
+  font-size: 18px;
 }
-
-header nav ul li a {
-    color: #FBF6E9;
-    font-size: larger;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.icon_breif i:hover {
+  color: #ffffff;
+  transition: 0.5s;
 }
-
-header nav ul li a:hover {
-    color: #ff006a;
-
+.single_brief h2 {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
 }
-
-header nav ul li a.active {
-    text-decoration: underline;
+.single_brief p {
+  font-size: 14px;
+  font-family: "Dosis", sans-serif;
 }
-
-.about-us {
-
-    padding: 30px;
-    border-radius: 40px;
-    width: 700px;
-    height: 300px;
-    margin-top: 60px;
-    margin-left:350px;
+.single_brief {
+  width: 25%;
+  float: left;
+  border-radius: 0;
+  background: #568f84;
+  box-shadow: 5px 5px 5px #489dcf;
+  margin: 0 7px;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+  margin-right:30px;
 
 }
+.single_brief:hover {
+  background: #406a62;
+  color: #fff;
+  transition: 0.5s;
+}
 
-.about-us h2 {
-    margin-top: 150px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+/* ONE */
+
+/* ################################################################ */
+
+/*  About Dr */
+
+.about_dr {
+  height: 60vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_dr img {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+.all-text {
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+.main_dr {
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.all-text h4 {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.all-text h1 {
+  font-size: 50px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.all-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #777777;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+.btn_dr button {
+  background: white;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111111;
+  border: none;
+  outline: none;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+  margin-right: 20px;
+}
+.btn_dr button:hover {
+  background-color: #608ea5;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn_dr .btn2 {
+  background-color: #111111;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  .about_dr {
+    height: auto;
+    width: 100%;
+    padding: 60px 0;
+  }
+  .all-text {
     text-align: center;
+    margin-top: 40px;
+  }
 }
 
-.about-us p {
-    margin-top:100px;
-     color: #fff;
-    margin-bottom: 15px;
-    border-radius: 22px;
-    margin-left:100px;
-    font-family: serif;
+@media screen and (max-width: 650px) {
+  .main_dr img {
+    margin-bottom: 35px;
+  }
+  .all-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
 }
-.buttons {
-    display: flex;
-    justify-content: center;}
-    /* margin-top: 50px; */
- button {
-     width: 200px;
-     padding: 10px;
-     color: #fff;
-     background-color: #ff006a;
-     border-radius: 5px;
-     cursor: pointer;
-     margin-top: 50px;
-    
-     /* margin-left: 340px; */
-transition: 1s;
 
-       }
-
-          button:hover {
-          transform: scale(1.2);
-          
-          }
+/*  About Dr */

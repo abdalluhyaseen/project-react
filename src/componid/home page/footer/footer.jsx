@@ -18,7 +18,7 @@ export default function footer() {
             </a>
           </div>
         </div>
-          <p className="top">&copy; 2025 SmartSchool. All rights reserved.</p>
+        <p className="top">&copy; 2025 SmartSchool. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -37,8 +37,8 @@
 
 .service-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px #ff006a;
-  background-color: #ff006a;
+  box-shadow: 0 8px 16px hsl(277, 64%, 61%);
+  background-color: hsl(277, 64%, 61%);
   color: #fff;
 }
 
