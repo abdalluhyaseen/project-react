@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 // import App from './App';
 
 import Home from "./App";
-import About from "./componid/aboutPage/about";
+
 // import Contact from "./router/pages/contact";
 // import ErrorPage from "./router/errorpage";
 
@@ -16,10 +16,10 @@ const router = createBrowserRouter([
     element: <Home />,
     // errorElement: <ErrorPage />,
   },
-  {
-    path: "/b",
-    element: <About />,
-  },
+  // {
+  //   path: "/b",
+  //   element: <About />,
+  // },
 
 ]);
 
