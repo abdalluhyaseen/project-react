@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  /* Body 400*/
+  font-family: "Open Sans", sans-serif;
+  /* Heading 400 600 */
+  font-family: "Poppins", sans-serif;
+}
 
 :root {
   --Violet: hsl(257, 40%, 49%);
@@ -7,9 +18,10 @@
 }
 
 .main-div {
+  width: 100%;
   min-height: 100vh;
   font-size: 15px;
-  background-image: url("../img/bg-desktop.svg");
+  background-image: url("../img//bg-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--Violet);
@@ -43,13 +55,12 @@
 
 .content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   gap: 50px;
 }
 .hero-text h1 {
   font-size: 40px;
-
   margin-bottom: 10px;
   font-weight: 600;
   color: var(--White);

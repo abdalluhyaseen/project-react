@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillAccountBook } from "react-icons/ai";
-// import 
+import Image from "../img/logo.svg";
+import Image1 from "../img/illustration-mockups.svg";
 
 import "./HeroSection.css";
 
@@ -10,11 +11,11 @@ function HeroSection() {
       <div className="container">
         <div className="wrapper">
           <div className="header">
-            <img src="./images/logo.svg" alt="" />
+            <img src={Image} alt="" />
           </div>
           <div className="content">
             <div className="hero-img">
-              <img src="./images/illustration-mockups.svg" alt="" />
+              <img src={Image1} alt="" />
             </div>
             <div className="hero-text">
               <h1>

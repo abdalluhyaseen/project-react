@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import "./index.css";
-// import App from './App';
+import About from './componid/aboutuspage/aboutus';
 
 import Home from "./App";
 
@@ -16,11 +16,10 @@ const router = createBrowserRouter([
     element: <Home />,
     // errorElement: <ErrorPage />,
   },
-  // {
-  //   path: "/b",
-  //   element: <About />,
-  // },
-
+  {
+    path: "/b",
+    element: <About />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
