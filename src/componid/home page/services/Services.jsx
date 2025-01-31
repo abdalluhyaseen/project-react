@@ -1,40 +1,43 @@
 import React from "react";
 import "./Services.css"; 
+import { useTranslation } from "react-i18next";
+
 
 const Services = () => {
+  const { t } = useTranslation();
   return (
     <section id="Services" className="services-section">
-      <h2 className="section-title">Smart School</h2>
+      <h2 className="section-title">{t("services")}</h2>
       <div className="services-grid">
         <div className="service-item active">
           <div className="icon">💻</div>
-          <h3>Student Affairs Department</h3>
-          <p>Student registration and admission. Management of attendance.</p>
+          <h3>{t("services-title")}</h3>
+          <p>{t("services-description")}</p>
         </div>
         <div className="service-item">
           <div className="icon">📈</div>
-          <h3>E-Learning</h3>
-          <p>Manage online lessons and study materials.</p>
+          <h3>{t("services-title1")}</h3>
+          <p>{t("services-description1")}</p>
         </div>
         <div className="service-item">
           <div className="icon">🎨</div>
-          <h3>Teachers' Department</h3>
-          <p>Monitor teachers' performance and evaluations.</p>
+          <h3>{t("services-title2")}</h3>
+          <p>{t("services-description2")}</p>
         </div>
         <div className="service-item">
           <div className="icon">📊</div>
-          <h3>Data Analysis</h3>
-          <p>Examinations and evaluations</p>
+          <h3>{t("services-title3")}</h3>
+          <p>{t("services-description3")}</p>
         </div>
         <div className="service-item">
           <div className="icon">📱</div>
-          <h3>Fee and Payment Management</h3>
-          <p>School Activities Department.</p>
+          <h3>{t("services-title4")}</h3>
+          <p>{t("services-description4")}</p>
         </div>
         <div className="service-item">
           <div className="icon">📄</div>
-          <h3>Data Analysis and Decision-Making</h3>
-          <p>Detailed reports on students' performance.</p>
+          <h3>{t("services-title5")}</h3>
+          <p>{t("services-description5")}</p>
         </div>
       </div>
     </section>

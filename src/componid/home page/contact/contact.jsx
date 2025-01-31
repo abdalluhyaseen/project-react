@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./contact.css";
 import Image from "../img/jjj.jpg";
+import { useTranslation } from "react-i18next";
 const ContactUsForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,56 +27,54 @@ const ContactUsForm = () => {
     <div id="Contact" className="contact-us-form">
       <div className="form-container">
         <div className="form-card">
-          <h2 className="form-title">Contact Us</h2>
+          <h2 className="form-title">{t("contact")}</h2>
 
           {success && (
-            <div className="success-message">
-              Thank you! Your message has been sent.
-            </div>
+            <div className="success-message">{t("contact-title")}</div>
           )}
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{t("contact-label")}</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Your Name"
+                placeholder={t("contact-title1")}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t("contact-label1")}</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Your Email"
+                placeholder={t("contact-title2")}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t("contact-label2")}</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Your Message"
+                placeholder={t("contact-title3")}
                 rows="4"
                 required
               ></textarea>
             </div>
 
             <button type="button" className="submit-button">
-              Send Message
+              {t("contact-button")}
             </button>
           </form>
         </div>

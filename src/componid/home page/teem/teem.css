@@ -10,10 +10,10 @@
   align-items: center;
   width: 80%;
   max-width: 1200px;
-  background: linear-gradient(to bottom, #439ebb, #d79e8e, #b47eb6);
+  background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 1px #007dfe;
 }
 
 .img1 {
@@ -29,7 +29,7 @@
 
 .span1{
   font-size: 50px;
-  color: hsl(228, 45%, 44%)
+  color: #007dfe
 }
 
 .team{

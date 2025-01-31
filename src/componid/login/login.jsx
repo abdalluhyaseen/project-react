@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./log.css";
+import "./login.css";
 
 const App = () => {
   const [isActive, setIsActive] = useState(false);
@@ -168,7 +168,7 @@ const App = () => {
               {loginFormik.touched.password && loginFormik.errors.password && (
                 <span className="error">{loginFormik.errors.password}</span>
               )}
-              <a href="#">Forgot Your Password?</a>
+              
               <button type="submit">Login</button>
             </form>
           </div>

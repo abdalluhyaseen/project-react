@@ -8,15 +8,17 @@ import {
   IoLaptopSharp,
 } from "react-icons/io5";
 import "./activity.css";
+import { useTranslation } from "react-i18next";
 
 function Services() {
+  const { t } = useTranslation();
   return (
     <div id="Activity">
-      <h1 className="speacial-heading">Activity</h1>
+      <h1 className="speacial-heading">{t("activity")}</h1>
       <section className="services">
         <div className="container_services">
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#674baf" }}>
               <IoTrophySharp
                 color={"#303030"}
                 beat
@@ -25,15 +27,12 @@ function Services() {
               />
             </div>
             <div className="content_services">
-              <h2>Project-Based Learning</h2>
-              <p>
-                Students work on projects using techniques such as 3D printing
-                or creative software.
-              </p>
+              <h2>{t("activity-title")} </h2>
+              <p> {t("activity-description")} </p>
             </div>
           </div>
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#f452c8" }}>
               <IoBasketballSharp
                 color={"#303030"}
                 rotate
@@ -42,15 +41,12 @@ function Services() {
               />
             </div>
             <div className="content_services">
-              <h2>Educational Games (Gamification)</h2>
-              <p>
-                Integrate digital games into educational curricula to encourage
-                students to participate
-              </p>
+              <h2>{t("activity-title1")}</h2>
+              <p>{t("activity-description1")}</p>
             </div>
           </div>
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#674baf" }}>
               <IoPersonSharp
                 color={"#303030"}
                 beat
@@ -59,12 +55,12 @@ function Services() {
               />
             </div>
             <div className="content_services">
-              <h2>Digital Assessmen</h2>
-              <p>Use online tests to evaluate students immediately</p>
+              <h2>{t("activity-title2")}</h2>
+              <p>{t("activity-description2")}</p>
             </div>
           </div>
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#f452c8" }}>
               <IoCalendarSharp
                 color={"#303030"}
                 beat
@@ -73,24 +69,21 @@ function Services() {
               />
             </div>
             <div className="content_services">
-              <h2>Virtual workshops</h2>
-              <p>
-                Organizing workshops across digital platforms such as Zoom or
-                Microsoft Teams to learn students from experts around the world.
-              </p>
+              <h2> {t("activity-title3")} </h2>
+              <p>{t("activity-description3")}</p>
             </div>
           </div>
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#674baf" }}>
               <IoHeartSharp color={"#303030"} beat height="70px" width="70px" />
             </div>
             <div className="content_services">
-              <h2>Reactive Education</h2>
-              <p>Using smart blackboards to offer interactive lessons</p>
+              <h2>{t("activity-title4")}</h2>
+              <p> {t("activity-description4")}</p>
             </div>
           </div>
           <div className="serviceBox" style={{ backgroundColor: "#303030" }}>
-            <div className="icon" style={{ "--i": "#6c757d" }}>
+            <div className="icon" style={{ "--i": "#f452c8" }}>
               <IoLaptopSharp
                 color={"#303030"}
                 beat
@@ -99,11 +92,8 @@ function Services() {
               />
             </div>
             <div className="content_services">
-              <h2>Pragmatic activities using technology</h2>
-              <p>
-                Like programming, robot building, or virtual experiments in
-                science
-              </p>
+              <h2> {t("activity-title5")}</h2>
+              <p> {t("activity-description5")}</p>
             </div>
           </div>
         </div>

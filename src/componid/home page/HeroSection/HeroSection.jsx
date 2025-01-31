@@ -1,11 +1,14 @@
 import React from "react";
-import { AiFillAccountBook } from "react-icons/ai";
+import { MdFacebook } from "react-icons/md";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa";
 import Image from "../img/logo.svg";
 import Image1 from "../img/illustration-mockups.svg";
-
+import { useTranslation } from "react-i18next";
 import "./HeroSection.css";
 
 function HeroSection() {
+  const { t } = useTranslation();
   return (
     <main className="main-div">
       <div className="container">
@@ -19,15 +22,10 @@ function HeroSection() {
             </div>
             <div className="hero-text">
               <h1>
-                Build The Community <br />
-                Your Fans Will Love
+                {t("hero-title")} <br /> {t("hero-title1")}
               </h1>
-              <p>
-                Huddle re-imagines the way we build communities. You have a
-                voice, but so does your audience. Create connections with your
-                users as you engage in genuine discussion.
-              </p>
-              <a href="#">Register</a>
+              <p>{t("herop")}</p>
+              <a href="#"> {t("heroa")}</a>
             </div>
           </div>
           <div className="social">
@@ -35,11 +33,10 @@ function HeroSection() {
               href="www.facebook.com"
               aria-label="Read More and click in my facebook account"
             >
-              <AiFillAccountBook
+              <MdFacebook
                 style={{
                   color: "white",
-                  fontSize: " 18px",
-                  margin: "2px",
+                  fontSize: "1.5rem",
                 }}
               />{" "}
             </a>
@@ -47,11 +44,10 @@ function HeroSection() {
               href="www.instagram.com"
               aria-label="Read More and click in my instagram account"
             >
-              <AiFillAccountBook
+              <AiFillInstagram
                 style={{
                   color: "white",
-                  fontSize: " 18px",
-                  margin: "2px",
+                  fontSize: "1.5rem",
                 }}
               />{" "}
             </a>
@@ -59,11 +55,10 @@ function HeroSection() {
               href="www.twitter.com"
               aria-label="Read More and click in my twitter account"
             >
-              <AiFillAccountBook
+              <FaTwitter
                 style={{
                   color: "white",
-                  fontSize: " 18px",
-                  margin: "2px",
+                  fontSize: "1.5rem",
                 }}
               />
             </a>
