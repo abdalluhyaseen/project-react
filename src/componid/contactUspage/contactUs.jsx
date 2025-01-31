@@ -14,7 +14,7 @@ function ContactUs() {
     <div>
       <div>
         <Nav />
-        <div className="body">
+        <div className="body1">
           <div className="container5">
             <div className="box_brieff">
               <div className="single_brief">

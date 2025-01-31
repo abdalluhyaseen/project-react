@@ -1,4 +1,4 @@
-.text-center { 
+.text-center {
   background: linear-gradient(to right, #ffffff, #9aa4b6);
   margin: 0;
   padding: 0;
@@ -9,12 +9,9 @@
   font-family: "Arial", sans-serif;
   width: 100%;
   margin-top: 70px;
-
 }
 
 .about-section {
-  /* margin-top: 90px; */
-
   color: white;
   width: 100%;
   height: 100vh;
@@ -86,8 +83,8 @@
   gap: 20px;
   padding: 20px;
   margin: auto;
-  font-family: "Poppins", sans-serif; 
-  font-weight: bold; 
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 .card {
   border-radius: 10px;
@@ -142,36 +139,42 @@
   margin: 30px;
   color: #000;
 }
-.container1 {
+.nop {
+  max-width: 80%;
+  overflow: hidden;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.container11 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
 }
 
-.card1 {
-  width: 150px;
+.card11 {
   background: #605c64;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 15px;
+  width: auto;
+  height: 200px;
 }
 
-.card1 img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.card11 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.card1 h3 {
+.card11 h3 {
   color: #fff;
   margin: 10px 0 5px;
   font-size: 1.2em;
 }
 
-.card1 p {
+.card11 p {
   font-size: 1em;
   color: #ffffff;
 }

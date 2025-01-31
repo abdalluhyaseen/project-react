@@ -25,7 +25,7 @@ function HeroSection() {
                 {t("hero-title")} <br /> {t("hero-title1")}
               </h1>
               <p>{t("herop")}</p>
-              <a href="#"> {t("heroa")}</a>
+              <a href="/Log"> {t("heroa")}</a>
             </div>
           </div>
           <div className="social">

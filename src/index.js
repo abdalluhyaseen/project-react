@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import "./index.css";
-import About from './componid/aboutuspage/Aboutus';
+import About from "./componid/aboutuspage/Aboutus";
 import Contact from "./componid/contactUspage/contactUs";
-
+import Login from "./componid/login/login";
 import Home from "./App";
 
 // import Contact from "./router/pages/contact";
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/c",
     element: <Contact />,
+  },
+  {
+    path: "/Log",
+    element: <Login />,
   },
 ]);
 

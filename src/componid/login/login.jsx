@@ -74,8 +74,8 @@ const App = () => {
 
     return (
       <div className="body">
-        <div className={`container ${isActive ? "active" : ""}`} id="container">
-          <div className="form-container sign-up">
+        <div className={`container7 ${isActive ? "active" : ""}`} id="container">
+          <div className="form-container7 sign-up">
             <form onSubmit={signUpFormik.handleSubmit}>
               <h1>Create Account</h1>
               <input
@@ -143,7 +143,7 @@ const App = () => {
             </form>
           </div>
 
-          <div className="form-container sign-in">
+          <div className="form-container7 sign-in">
             <form onSubmit={loginFormik.handleSubmit}>
               <h1>Login</h1>
               <input
@@ -173,7 +173,7 @@ const App = () => {
             </form>
           </div>
 
-          <div className="toggle-container">
+          <div className="toggle-container7">
             <div className="toggle">
               <div className="toggle-panel toggle-left">
                 <h1>Welcome Back!</h1>
