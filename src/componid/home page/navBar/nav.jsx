@@ -23,6 +23,9 @@ function Navbar() {
             <li className="element">
               <a href="/b"> {t("nava1")} </a>
             </li>
+            <li className="element">
+              <a href="/c"> {t("nava2")} </a>
+            </li>
           </ul>
         </div>
         <div>

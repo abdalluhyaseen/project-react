@@ -2,6 +2,7 @@
   "nav-title": "SmartSchool",
   "nava": "Home Page",
   "nava1": "About Us",
+   "nava2": "Contact Us",
   "hero-title": "Welcome to",
   "hero-title1": "SmartSchool",
   "herop": "Smart School is an educational institution that uses modern technology to improve the learning experience. Based on digital systems such as interactive panels, e-learning, and artificial intelligence to provide a more efficient learning environment. It aims to promote creativity, develop students' skills, and provide a tailored learning experience suited to each student's needs.",
@@ -55,5 +56,10 @@
   "footer-title6": "Jordan, Aqaba",
   "footer-title7": "+962 797699874",
   "footer-title8": "info@school.com",
-  "footer-title9": " 2025 Smart School. All rights reserved."
+  "footer-title9": " 2025 Smart School. All rights reserved.",
+   "contact-paga":"Telephone",
+   "contact-paga-location":"Location",
+   "contact-paga-title":"Aqaba - Jordan",
+   "contact-paga-title1":"Email"
+
 }

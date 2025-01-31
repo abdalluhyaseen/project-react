@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import "./index.css";
-// import About from './componid/aboutuspage/aboutus';
+import About from './componid/aboutuspage/Aboutus';
+import Contact from "./componid/contactUspage/contactUs";
 
 import Home from "./App";
 
@@ -16,10 +17,14 @@ const router = createBrowserRouter([
     element: <Home />,
     // errorElement: <ErrorPage />,
   },
-  // {
-  //   path: "/b",
-  //   element: <About />,
-  // },
+  {
+    path: "/b",
+    element: <About />,
+  },
+  {
+    path: "/c",
+    element: <Contact />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -7,7 +7,7 @@ const TeamPage = () => {
   const { t } = useTranslation();
   return (
     <div className="body-team">
-      <div className="container1">
+      <div className="container2">
         <img src={Imge1} alt="a" />
         <div className="text-content">
           <h1>
