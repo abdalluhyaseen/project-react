@@ -30,72 +30,61 @@ import Imag17 from "./img/17.png";
 import Imag18 from "./img/18.png";
 import Imag19 from "./img/19.png";
 import Imag20 from "./img/20.png";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
+
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="text-center">
       <Nav />
       <div className="about-section">
         <div className="overlay" />
-        <h1 className="about-title"> An Overview of the School</h1>
+        <h1 className="about-title"> {t("about-page-titel")}</h1>
         <img className="profile-img" src={Boy} alt="mo" />
-        <p className="about-text">
-          Our school is one of the leading educational institutions, committed
-          to providing an excellent learning environment aimed at building a
-          creative and future-friendly generation. The school relies on advanced
-          educational curricula, combining the academic, educational and
-          technological aspect, to ensure comprehensive student development.{" "}
-        </p>
+        <p className="about-text">{t("about-page-description")} </p>
       </div>
-      <h2 className="h2">🏫 Key Staff</h2>
+      <h2 className="h2">🏫 {t("about-page-titel1")}</h2>
       <div className="container3">
         <div className="card">
           <img src={Abdalluh} alt="صورة الشخص" />
-          <h3>Abdalluh yaseen</h3>
-          <p>Headmaster</p>
-          <p>
-            leads the school with a clear vision towards educational excellence.
-          </p>
+          <h3>{t("about-page-card-name1")}</h3>
+          <p>{t("about-page-card-title1")}</p>
+          <p>{t("about-page-card-description1")} </p>
         </div>
         <div className="card">
           <img src={Ahmad} alt="صورة الشخص" />
-          <h3>Ahmad Naser </h3>
-          <p>Deputy Director's </p>
-          <p>Supervises academic and administrative operations.</p>
+          <h3> {t("about-page-card-name2")}</h3>
+          <p>{t("about-page-card-title2")}</p>
+          <p>{t("about-page-card-description2")}</p>
         </div>
         <div className="card">
           <img src={Rama} alt="صورة الشخص" />
-          <h3>Rama Alaidy</h3>
-          <p>Head of E-Learning</p>
-          <p>Responsible for integrating technology into education.</p>
+          <h3>{t("about-page-card-name3")} </h3>
+          <p>{t("about-page-card-title3")}</p>
+          <p>{t("about-page-card-description3")}</p>
         </div>
         <div className="card">
           <img src={Rahaf} alt="صورة الشخص" />
-          <h3> Rahaf Aqrabawi</h3>
-          <p>Head of Student Activities </p>
-          <p>Organizes extra-curricular activities and initiatives.</p>
+          <h3>{t("about-page-card-name4")} </h3>
+          <p>{t("about-page-card-title4")} </p>
+          <p>{t("about-page-card-description4")}</p>
         </div>
         <div className="card">
           <img src={Rana} alt="صورة الشخص" />
-          <h3>Rana Kreishan</h3>
-          <p>Teachers' Council </p>
-          <p>
-            omprising a selection of qualified teachers specializing in various
-            subjects.
-          </p>
+          <h3>{t("about-page-card-name5")} </h3>
+          <p>{t("about-page-card-title5")} </p>
+          <p>{t("about-page-card-description5")}</p>
         </div>
         <div className="card">
           <img src={Jenan} alt="صورة الشخص" />
-          <h3> Jenan Dweib</h3>
-          <p>Teachers' Council</p>
-          <p>
-            omprising a selection of qualified teachers specializing in various
-            subjects.
-          </p>
+          <h3>{t("about-page-card-name6")} </h3>
+          <p>{t("about-page-card-title6")}</p>
+          <p>{t("about-page-card-description6")}</p>
         </div>
       </div>
-      <h2 className="h2">🎓 Our Students</h2>
+      <h2 className="h2">🎓 {t("about-page-Students-title")} </h2>
       <div className="nop">
         <motion.div
           className="container11"
@@ -112,125 +101,123 @@ function Header() {
         >
           <div className="card11">
             <img src={Imag1} alt="Map" />
-            <h3>Ali Hassan</h3>
+            <h3>{t("about-page-Students-name1")}</h3>
           </div>
           <div className="card11">
             <img src={Imag2} alt="Map" />
-            <h3>Sara Khaled</h3>
+            <h3>{t("about-page-Students-name2")}</h3>
           </div>
           <div className="card11">
             <img src={Imag3} alt="Map" />
-            <h3>Mohammad Tariq</h3>
+            <h3>M{t("about-page-Students-name3")}</h3>
           </div>
           <div className="card11">
             <img src={Imag4} alt="Map" />
-            <h3>Layla Ahmed</h3>
+            <h3>{t("about-page-Students-name4")}</h3>
           </div>
           <div className="card11">
             <img src={Imag5} alt="Map" />
-            <h3>Yousef Omar</h3>
+            <h3>{t("about-page-Students-name5")}</h3>
           </div>
           <div className="card11">
             <img src={Imag6} alt="Map" />
-            <h3>Fatima Noor</h3>
+            <h3>{t("about-page-Students-name6")}</h3>
           </div>
           <div className="card11">
             <img src={Imag7} alt="Map" />
-            <h3>Kareem Salah</h3>
+            <h3>{t("about-page-Students-name7")}</h3>
           </div>
           <div className="card11">
             <img src={Imag8} alt="Map" />
-            <h3>Rasha Samir</h3>
+            <h3>{t("about-page-Students-name8")}</h3>
           </div>
           <div className="card11">
             <img src={Imag9} alt="Map" />
-            <h3>Omar Fares</h3>
+            <h3>{t("about-page-Students-name9")}</h3>
           </div>
           <div className="card11">
             <img src={Imag10} alt="Map" />
-            <h3>Nour Hani</h3>
+            <h3>{t("about-page-Students-name10")}</h3>
           </div>
           <div className="card11">
             <img src={Imag11} alt="Map" />
-            <h3>Zaid Mahmoud</h3>
+            <h3>{t("about-page-Students-name11")}</h3>
           </div>
           <div className="card11">
             <img src={Imag12} alt="Map" />
-            <h3>Tariq Adel</h3>
+            <h3>{t("about-page-Students-name12")}</h3>
           </div>
           <div className="card11">
             <img src={Imag13} alt="Map" />
-            <h3> Hiba Saeed</h3>
+            <h3>{t("about-page-Students-name13")}</h3>
           </div>
           <div className="card11">
             <img src={Imag14} alt="Map" />
-            <h3> Ahmed Jamal</h3>
+            <h3>{t("about-page-Students-name14")}</h3>
           </div>
           <div className="card11">
             <img src={Imag15} alt="Map" />
-            <h3>Reem Basem</h3>
+            <h3>{t("about-page-Students-name15")}</h3>
           </div>
           <div className="card11">
             <img src={Imag16} alt="Map" />
-            <h3>Salma Ziad</h3>
+            <h3>{t("about-page-Students-name16")}</h3>
           </div>
           <div className="card11">
             <img src={Imag17} alt="Map" />
-            <h3>
-              Sara <br /> Nasr
-            </h3>
+            <h3>{t("about-page-Students-name17")}</h3>
           </div>
           <div className="card11">
             <img src={Imag18} alt="Map" />
-            <h3>Hana Fady</h3>
+            <h3>{t("about-page-Students-name18")}</h3>
           </div>
           <div className="card11">
             <img src={Imag19} alt="Map" />
-            <h3> Waleed Khaled</h3>
+            <h3>{t("about-page-Students-name19")}</h3>
           </div>
           <div className="card11">
             <img src={Imag20} alt="Map" />
-            <h3>Mohammad Tariq</h3>
+            <h3>{t("about-page-Students-name20")}</h3>
           </div>
           <div className="card11">
             <img src={Imag1} alt="Map" />
-            <h3> Ahmed Abdalluh</h3>
+            <h3>{t("about-page-Students-name21")}</h3>
           </div>
           <div className="card11">
             <img src={Imag3} alt="Map" />
-            <h3>Yousef Omar</h3>
+            <h3>{t("about-page-Students-name22")}</h3>
           </div>
           <div className="card11">
             <img src={Imag7} alt="Map" />
-            <h3>ahmad Noor</h3>
+            <h3>{t("about-page-Students-name23")}</h3>
           </div>
           <div className="card11">
             <img src={Imag12} alt="Map" />
-            <h3>Kareem Salah</h3>
+            <h3>{t("about-page-Students-name24")}</h3>
           </div>
           <div className="card11">
             <img src={Imag16} alt="Map" />
-            <h3>Rasha Samir</h3>
+            <h3>{t("about-page-Students-name25")}</h3>
           </div>
           <div className="card11">
             <img src={Imag19} alt="Map" />
-            <h3>Omar Fares</h3>
+            <h3>{t("about-page-Students-name26")}</h3>
           </div>
           <div className="card11">
             <img src={Imag11} alt="Map" />
-            <h3>Nour Hani</h3>
+            <h3>{t("about-page-Students-name27")}</h3>
           </div>
           <div className="card11">
             <img src={Imag7} alt="Map" />
-            <h3>Zaid Mahmoud</h3>
+            <h3>{t("about-page-Students-name28")}</h3>
           </div>
           <div className="card11">
             <img src={Imag13} alt="Map" />
-            <h3>Bilal Karim</h3>
+            <h3>{t("about-page-Students-name29")}</h3>
           </div>
           <div className="card11">
             <img src={Imag19} alt="Map" />
-            <h3>Nada Sameer</h3>
+            <h3>{t("about-page-Students-name30")}</h3>
           </div>
         </motion.div>
       </div>

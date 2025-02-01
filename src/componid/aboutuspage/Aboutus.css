@@ -94,7 +94,8 @@
   color: white;
   position: relative;
   overflow: hidden;
-  max-width: 400px;
+  width: 400px;
+  height: 237px;
 }
 .card::before {
   content: "";
