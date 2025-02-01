@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
 import "./contactUs.css";
-import Image from './img/WhatsApp Image 2025-01-31 at 19.23.44_1e9f56dd.jpg'
-import Contact from "../home page/contact/contact"
+import Image from "./img/WhatsApp Image 2025-01-31 at 19.23.44_1e9f56dd.jpg";
+import Contact from "../home page/contact/contact";
 import Nav from "../home page/navBar/nav";
 import Footer from "../home page/footer/footer";
 import { useTranslation } from "react-i18next";
 
-
 function ContactUs() {
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
   return (
     <div>
       <div>
@@ -44,7 +43,7 @@ function ContactUs() {
         <Contact />
         <section className="location-contact">
           <div className="location">
-            <h1>Our Location</h1>
+            <h1>{t("contact-paga-title2")}</h1>
             <a href="https://www.google.com/maps/place/Orange+Digital+Village+Aqaba/@29.535652,35.0123723,17z/data=!3m1!4b1!4m6!3m5!1s0x150071875a9fca41:0xf5d61d999f967371!8m2!3d29.535652!4d35.0123723!16s%2Fg%2F11t2b3tv6d?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D">
               <img src={Image} alt="Map" />
             </a>
@@ -56,4 +55,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs
+export default ContactUs;

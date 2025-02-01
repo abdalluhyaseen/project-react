@@ -39,7 +39,7 @@ function Header() {
       <div className="about-section">
         <div className="overlay" />
         <h1 className="about-title"> An Overview of the School</h1>
-        <img className="profile-img" src={Boy} />
+        <img className="profile-img" src={Boy} alt="mo" />
         <p className="about-text">
           Our school is one of the leading educational institutions, committed
           to providing an excellent learning environment aimed at building a
@@ -99,11 +99,11 @@ function Header() {
       <div className="nop">
         <motion.div
           className="container11"
-          animate={{ x: isHovered ? 0 : "-50%" }}
+          animate={{ x: isHovered ? 0 : "-60%" }}
           transition={{
             x: {
               repeat: Infinity,
-              duration: isHovered ? 5 : 23,
+              duration: isHovered ? 7 : 23,
               ease: "linear",
             },
           }}
@@ -176,7 +176,9 @@ function Header() {
           </div>
           <div className="card11">
             <img src={Imag17} alt="Map" />
-            <h3>Sara <br /> Nasr</h3>
+            <h3>
+              Sara <br /> Nasr
+            </h3>
           </div>
           <div className="card11">
             <img src={Imag18} alt="Map" />
