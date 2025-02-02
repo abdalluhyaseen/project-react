@@ -181,13 +181,13 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  .container3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .container {
+  .container3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
