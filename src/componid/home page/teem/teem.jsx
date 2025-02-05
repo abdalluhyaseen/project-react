@@ -10,9 +10,8 @@ const TeamPage = () => {
       <div className="container2">
         <img src={Imge1} alt="a" />
         <div className="text-content">
-          <h1>
-            <span className="span1"> {t("teem-title")}</span>
-            <p className="span1">{t("teem-title1")}</p>
+          <h1 className="span1">
+            {t("teem-title")} <br /> {t("teem-title1")}
           </h1>
           <p className="para">{t("teem-description")}</p>
           <p className="para">{t("teem-description1")}</p>

@@ -14,7 +14,6 @@
   border-radius: 10px;
   box-shadow: 5px 5px 1px #007dfe;
   height: 90vh;
-
 }
 
 .img1 {
@@ -28,40 +27,44 @@
   padding: 20px;
 }
 
-.span1{
+.span1 {
   font-size: 50px;
-  color: #007dfe
+  color: #007dfe;
+  transition: 0.5s;
+}
+.span1:hover {
+  transform: scale(1.05);
 }
 
-.team{
+.team {
   font-size: 25px;
   line-height: 1.6;
 }
-.para{
+.para {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif; 
-    font-weight: 500; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   line-height: 1.6;
 }
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
   .img1 {
-      width: 80%;
-      margin-bottom: 15px;
+    width: 80%;
+    margin-bottom: 15px;
   }
   .text-content {
-      width: 100%;
+    width: 100%;
   }
   .span1 {
-      font-size: 30px;
+    font-size: 30px;
   }
   .team {
-      font-size: 20px;
+    font-size: 20px;
   }
   .para {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
