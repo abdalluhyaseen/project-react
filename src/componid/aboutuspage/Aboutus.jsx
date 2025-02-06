@@ -47,38 +47,38 @@ function Header() {
       </div>
       <h2 className="h2">🏫 {t("about-page-titel1")}</h2>
       <div className="container3">
-        <div className="card">
-          <img src={Abdalluh} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Abdalluh} alt="صورة الشخص" />
           <h3>{t("about-page-card-name1")}</h3>
           <p>{t("about-page-card-title1")}</p>
           <p>{t("about-page-card-description1")} </p>
         </div>
-        <div className="card">
-          <img src={Ahmad} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Ahmad} alt="صورة الشخص" />
           <h3> {t("about-page-card-name2")}</h3>
           <p>{t("about-page-card-title2")}</p>
           <p>{t("about-page-card-description2")}</p>
         </div>
-        <div className="card">
-          <img src={Rama} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Rama} alt="صورة الشخص" />
           <h3>{t("about-page-card-name3")} </h3>
           <p>{t("about-page-card-title3")}</p>
           <p>{t("about-page-card-description3")}</p>
         </div>
-        <div className="card">
-          <img src={Rahaf} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Rahaf} alt="صورة الشخص" />
           <h3>{t("about-page-card-name4")} </h3>
           <p>{t("about-page-card-title4")} </p>
           <p>{t("about-page-card-description4")}</p>
         </div>
-        <div className="card">
-          <img src={Rana} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Rana} alt="صورة الشخص" />
           <h3>{t("about-page-card-name5")} </h3>
           <p>{t("about-page-card-title5")} </p>
           <p>{t("about-page-card-description5")}</p>
         </div>
-        <div className="card">
-          <img src={Jenan} alt="صورة الشخص" />
+        <div className="card22">
+          <img className="img1" src={Jenan} alt="صورة الشخص" />
           <h3>{t("about-page-card-name6")} </h3>
           <p>{t("about-page-card-title6")}</p>
           <p>{t("about-page-card-description6")}</p>

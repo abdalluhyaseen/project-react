@@ -8,7 +8,7 @@ const TeamPage = () => {
   return (
     <div className="body-team">
       <div className="container2">
-        <img src={Imge1} alt="a" />
+        <img className="img1" src={Imge1} alt="a" />
         <div className="text-content">
           <h1 className="span1">
             {t("teem-title")} <br /> {t("teem-title1")}

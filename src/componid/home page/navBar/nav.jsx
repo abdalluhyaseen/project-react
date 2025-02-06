@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <div className="main-s">
-      <nav className="navbar">
+      <nav className="navbar1">
         <div className="logo">
           <h1>{t("nav-title")}</h1>
         </div>
