@@ -45,6 +45,7 @@
 .right-components {
   list-style: none;
   padding: 0;
+  display: flex;
 }
 
 .right-components li {

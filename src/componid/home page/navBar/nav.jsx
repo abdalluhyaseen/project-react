@@ -2,9 +2,9 @@ import React from "react";
 // import { useNavigate } from "react-router-dom";
 import "./nav.css";
 import { useTranslation } from "react-i18next";
-
+import { BsPersonCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function Navbar() {
-  
   const { t, i18n } = useTranslation();
 
   const selectedLanguage = i18n.language;
@@ -55,6 +55,17 @@ function Navbar() {
                   EN
                 </button>
               )}
+            </li>
+            <li className="element">
+              <Link to="/fn">
+                <BsPersonCircle
+                  style={{
+                    color: "white",
+                    fontSize: "1.8rem",
+                    margin: "7px",
+                  }}
+                />
+              </Link>
             </li>
           </ul>
         </div>

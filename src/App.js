@@ -6,7 +6,6 @@ import Teem from "./componid/home page/teem/teem";
 import Nav from "./componid/home page/navBar/nav";
 import Footer from "./componid/home page/footer/footer";
 import Hero from "./componid/home page/HeroSection/HeroSection";
-// import Log from ".//componid/login/login";
 import "./i18n";
 
 
@@ -20,7 +19,6 @@ function App() {
       <Teem />
       <Contact />
       <Footer />
-      {/* <Log /> */}
     </div>
   );
 }

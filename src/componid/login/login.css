@@ -7,7 +7,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.body {
+.body22 {
   background-color: #c9d6ff;
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
   display: flex;
@@ -26,6 +26,7 @@
   width: 768px;
   max-width: 100%;
   min-height: 480px;
+  margin-bottom: 50px;
 }
 
 .container7 p {

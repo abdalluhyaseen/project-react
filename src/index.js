@@ -5,9 +5,9 @@ import Contact from "./componid/contactUspage/contactUs";
 import Login from "./componid/login/login";
 import Home from "./App";
 import DAshbord from "./componid/dshbord/components/dashbord";
-// import SidebarICon from "./componid/dshbord/components/SidebarICon/SidebarICon.jsx";
-// import Form from "./componid/dshbord/components/form/form.jsx";
 import Add from "./componid/dshbord/components/add/add";
+import Student from "./componid/dshbord/components/add/add1";
+import Profile from "./componid/home page/student/studint";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -35,6 +35,14 @@ const router = createBrowserRouter([
   {
     path: "/add",
     element: <Add />,
+  },
+  {
+    path: "/student",
+    element: <Student />,
+  },
+  {
+    path: "/fn",
+    element: <Profile />,
   },
 ]);
 

@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { FaRegEdit } from "react-icons/fa"; 
+import { FaRegEdit, FaUserGraduate } from "react-icons/fa";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
-import "./SidebarICon.css"
+import "./SidebarICon.css";
 
 const SidebarICon = () => {
-  const [activeItem, setActiveItem] = useState("home"); 
+  const [activeItem, setActiveItem] = useState("home");
   const handleItemClick = (item) => {
     setActiveItem(item);
-  }
+  };
 
   return (
-    <div className="d-flex py-3 px-2 flex-column justify-content-between  h-100">
+    <div className="sidebar d-flex py-3 px-2 flex-column justify-content-between h-100">
       <div className="d-flex flex-column align-items-center ">
         <div
           className={`sidebar-head-icon bg-success d-flex flex-fill fs-3 p-2 rounded-3 my-3 `}
@@ -33,11 +33,21 @@ const SidebarICon = () => {
         <Link to="/add">
           <div
             className={`sidebar-icon d-flex flex-fill fs-3 p-2 rounded-3 my-3 ${
-              activeItem === "add" ? "active" : ""
+              activeItem === "form" ? "active" : ""
             }`}
-            onClick={() => handleItemClick("add")}
+            onClick={() => handleItemClick("form")}
           >
             <FaRegEdit />
+          </div>
+        </Link>
+        <Link to="/Student">
+          <div
+            className={`sidebar-icon d-flex flex-fill fs-3 p-2 rounded-3 my-3 ${
+              activeItem === "student" ? "active" : ""
+            }`}
+            onClick={() => handleItemClick("student")}
+          >
+            <FaUserGraduate />
           </div>
         </Link>
       </div>

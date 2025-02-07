@@ -180,4 +180,4 @@ const ClintData = [
     dateofbirth: "2007-01-30",
   },
 ];
-export default ClintData
+export default ClintData;

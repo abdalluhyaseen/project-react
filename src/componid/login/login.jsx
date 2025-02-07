@@ -8,25 +8,24 @@ import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const Navigate = useNavigate();
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [registeredUser, setRegisteredUser] = useState(
     JSON.parse(localStorage.getItem("registeredUser")) || null
   );
+
   const students = [
     {
       email: "abdalluhyaseen@gmail.com",
       password: "123456A",
-      Firstname: "abdalluh",
-      lastname: "yaseen",
+      firstName: "abdalluh",
+      lastName: "yaseen",
       number: "0797699874",
     },
     {
       email: "ahmadnasr@gmail.com",
       password: "123456N",
-      Firstname: "ahmad",
-      lastname: "nasr",
+      firstName: "ahmad",
+      lastName: "nasr",
       number: "0797699874",
     },
   ];
@@ -34,10 +33,16 @@ const App = () => {
     {
       email: "amroalWageei@gmail.com",
       password: "12345678A",
+      firstName: "amro",
+      lastName: "Wageei",
+      number: "0797699874",
     },
     {
       email: "leenhammouri@gmail.com",
       password: "12345678L",
+      firstName: "leen",
+      lastName: "hammouri",
+      number: "0797699874",
     },
   ];
 
@@ -53,6 +58,7 @@ const App = () => {
       confirmPassword: "",
       firstName: "",
       lastName: "",
+      phone: "",
     },
     validationSchema: Yup.object({
       email: Yup.string()
@@ -70,22 +76,29 @@ const App = () => {
         .required("Confirm password is required"),
       firstName: Yup.string().required("First name is required"),
       lastName: Yup.string().required("Last name is required"),
+      phone: Yup.string().required("Phone number is required"),
     }),
     onSubmit: (values) => {
       const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
-
       if (storedUser && storedUser.email === values.email) {
         alert("This email is already registered.");
       } else {
-        console.log("User registered:", values);
-
         localStorage.setItem(
           "registeredUser",
-          JSON.stringify({ email: values.email, password: values.password })
+          JSON.stringify({
+            email: values.email,
+            password: values.password,
+            firstName: values.firstName,
+            lastName: values.lastName,
+            phone: values.phone,
+          })
         );
         setRegisteredUser({
           email: values.email,
           password: values.password,
+          firstName: values.firstName,
+          lastName: values.lastName,
+          phone: values.phone,
         });
         toggleClass();
       }
@@ -116,25 +129,36 @@ const App = () => {
       );
 
       if (student) {
+        // Store student profile information
         localStorage.setItem(
           "studentProfile",
           JSON.stringify({
             email: student.email,
-            Firstname: student.Firstname,
-            lastname: student.lastname,
-            number: student.number,
-            profileImage:
-              "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Fquick-saves--948430002775283723%2F&psig=AOvVaw1znhhsv060T-oWlmgBmyrV&ust=1739004162517000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDml76VsYsDFQAAAAAdAAAAABAE",
+            firstName: student.firstName,
+            lastName: student.lastName,
+            phone: student.number,
+            profileImage: "https://www.example.com/default-profile.jpg", // Default image
           })
         );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/");
+          Navigate("/fn"); // Redirect to student's home or dashboard
         }, 2000);
       } else if (teacher) {
+        // Store teacher profile information
+        localStorage.setItem(
+          "teacherProfile",
+          JSON.stringify({
+            email: teacher.email,
+            firstName: teacher.firstName,
+            lastName: teacher.lastName,
+            phone: teacher.number,
+            profileImage: "https://www.example.com/default-profile.jpg", // Default image
+          })
+        );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/dash");
+          Navigate("/dash"); // Redirect to teacher's dashboard
         }, 2000);
       } else {
         toast.error("Invalid email or password!");
@@ -150,7 +174,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="body">
+    <div className="body22">
       <div className={`container7 ${isActive ? "active" : ""}`} id="container">
         <div className="form-container7 sign-up">
           <form onSubmit={signUpFormik.handleSubmit}>
@@ -214,6 +238,17 @@ const App = () => {
                   {signUpFormik.errors.confirmPassword}
                 </span>
               )}
+            <input
+              type="text"
+              name="phone"
+              value={signUpFormik.values.phone}
+              onChange={signUpFormik.handleChange}
+              onBlur={signUpFormik.handleBlur}
+              placeholder="Phone Number"
+            />
+            {signUpFormik.touched.phone && signUpFormik.errors.phone && (
+              <span className="error">{signUpFormik.errors.phone}</span>
+            )}
             <button type="submit">Sign Up</button>
           </form>
         </div>
@@ -243,7 +278,6 @@ const App = () => {
             {loginFormik.touched.password && loginFormik.errors.password && (
               <span className="error">{loginFormik.errors.password}</span>
             )}
-
             <button type="submit">Login</button>
           </form>
         </div>
@@ -267,19 +301,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-        transition={Bounce}
-      />
+      <ToastContainer transition={Bounce} />
     </div>
   );
 };
