@@ -3,11 +3,13 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const Navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, sitPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [registeredUser, setRegisteredUser] = useState(
     JSON.parse(localStorage.getItem("registeredUser")) || null
@@ -18,15 +20,17 @@ const App = () => {
       password: "123456A",
       Firstname: "abdalluh",
       lastname: "yaseen",
+      number: "0797699874",
     },
     {
       email: "ahmadnasr@gmail.com",
       password: "123456N",
       Firstname: "ahmad",
       lastname: "nasr",
+      number: "0797699874",
     },
   ];
-  const teacher = [
+  const teachers = [
     {
       email: "amroalWageei@gmail.com",
       password: "12345678A",
@@ -101,15 +105,39 @@ const App = () => {
       password: Yup.string().required("Password is required"),
     }),
     onSubmit: (values) => {
-      if (
-        registeredUser &&
-        values.email === registeredUser.email &&
-        values.password === registeredUser.password
-      ) {
-        alert("Login successful!");
-        Navigate("/", { replace: true });
+      const student = students.find(
+        (user) =>
+          user.email === values.email && user.password === values.password
+      );
+
+      const teacher = teachers.find(
+        (user) =>
+          user.email === values.email && user.password === values.password
+      );
+
+      if (student) {
+        localStorage.setItem(
+          "studentProfile",
+          JSON.stringify({
+            email: student.email,
+            Firstname: student.Firstname,
+            lastname: student.lastname,
+            number: student.number,
+            profileImage:
+              "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Fquick-saves--948430002775283723%2F&psig=AOvVaw1znhhsv060T-oWlmgBmyrV&ust=1739004162517000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDml76VsYsDFQAAAAAdAAAAABAE",
+          })
+        );
+        toast.success("Welcome", { autoClose: 1500 });
+        setTimeout(() => {
+          Navigate("/");
+        }, 2000);
+      } else if (teacher) {
+        toast.success("Welcome", { autoClose: 1500 });
+        setTimeout(() => {
+          Navigate("/dash");
+        }, 2000);
       } else {
-        alert("Invalid email or password!");
+        toast.error("Invalid email or password!");
       }
     },
   });
@@ -239,6 +267,19 @@ const App = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </div>
   );
 };
