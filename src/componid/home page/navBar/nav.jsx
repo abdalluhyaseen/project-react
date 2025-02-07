@@ -3,15 +3,18 @@ import React from "react";
 import "./nav.css";
 import { useTranslation } from "react-i18next";
 
-
 function Navbar() {
-  // const navigate = useNavigate();
+  
   const { t, i18n } = useTranslation();
 
+  const selectedLanguage = i18n.language;
 
   return (
     <div className="main-s">
-      <nav className="navbar1">
+      <nav
+        style={{ direction: selectedLanguage === "ar" ? "rtl" : "ltr" }}
+        className="navbar1"
+      >
         <div className="logo">
           <h1>{t("nav-title")}</h1>
         </div>

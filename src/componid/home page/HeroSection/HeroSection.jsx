@@ -2,25 +2,26 @@ import React from "react";
 import { MdFacebook } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
-import Image from "../img/logo.svg";
 import Image1 from "../img/illustration-mockups.svg";
 import { useTranslation } from "react-i18next";
 import "./HeroSection.css";
 
 function HeroSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const selectedLanguage = i18n.language;
+
   return (
     <main className="main-div">
       <div className="container">
         <div className="wrapper">
-          <div className="header">
-            <img src={Image} alt="" />
-          </div>
           <div className="content">
             <div className="hero-img">
               <img src={Image1} alt="" />
             </div>
-            <div className="hero-text">
+            <div
+              style={{ direction: selectedLanguage === "ar" ? "rtl" : "ltr" }}
+              className="hero-text"
+            >
               <h1>
                 {t("hero-title")} <br /> {t("hero-title1")}
               </h1>

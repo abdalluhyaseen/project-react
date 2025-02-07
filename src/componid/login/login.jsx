@@ -6,10 +6,36 @@ import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const Navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, sitPassword] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [registeredUser, setRegisteredUser] = useState(
     JSON.parse(localStorage.getItem("registeredUser")) || null
   );
+  const students = [
+    {
+      email: "abdalluhyaseen@gmail.com",
+      password: "123456A",
+      Firstname: "abdalluh",
+      lastname: "yaseen",
+    },
+    {
+      email: "ahmadnasr@gmail.com",
+      password: "123456N",
+      Firstname: "ahmad",
+      lastname: "nasr",
+    },
+  ];
+  const teacher = [
+    {
+      email: "amroalWageei@gmail.com",
+      password: "12345678A",
+    },
+    {
+      email: "leenhammouri@gmail.com",
+      password: "12345678L",
+    },
+  ];
 
   const toggleClass = () => {
     setIsActive(!isActive);

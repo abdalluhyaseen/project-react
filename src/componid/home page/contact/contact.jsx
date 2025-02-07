@@ -3,7 +3,8 @@ import "./contact.css";
 import Image from "../img/jjj.jpg";
 import { useTranslation } from "react-i18next";
 const ContactUsForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const selectedLanguage = i18n.language;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +25,11 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div id="Contact" className="contact-us-form">
+    <div
+      style={{ direction: selectedLanguage === "ar" ? "rtl" : "ltr" }}
+      id="Contact"
+      className="contact-us-form"
+    >
       <div className="form-container">
         <div className="form-card">
           <h2 className="form-title">{t("contact")}</h2>

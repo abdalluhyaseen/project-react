@@ -23,7 +23,7 @@ const RegistrationForm = () => {
           Fill out the form carefully for registration
         </p>
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* Student Name */}
+        
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-gray-700">First Name</label>
