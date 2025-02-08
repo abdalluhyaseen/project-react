@@ -129,7 +129,6 @@ const App = () => {
       );
 
       if (student) {
-        // Store student profile information
         localStorage.setItem(
           "studentProfile",
           JSON.stringify({
@@ -137,15 +136,14 @@ const App = () => {
             firstName: student.firstName,
             lastName: student.lastName,
             phone: student.number,
-            profileImage: "https://www.example.com/default-profile.jpg", // Default image
+            profileImage: "https://www.example.com/default-profile.jpg",
           })
         );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/fn"); // Redirect to student's home or dashboard
+          Navigate("/fn"); 
         }, 2000);
       } else if (teacher) {
-        // Store teacher profile information
         localStorage.setItem(
           "teacherProfile",
           JSON.stringify({
@@ -153,12 +151,12 @@ const App = () => {
             firstName: teacher.firstName,
             lastName: teacher.lastName,
             phone: teacher.number,
-            profileImage: "https://www.example.com/default-profile.jpg", // Default image
+            profileImage: "https://www.example.com/default-profile.jpg", 
           })
         );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/dash"); // Redirect to teacher's dashboard
+          Navigate("/dash"); 
         }, 2000);
       } else {
         toast.error("Invalid email or password!");

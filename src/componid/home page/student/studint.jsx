@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const StudentProfile = () => {
   const [phone, setPhone] = useState("");
@@ -143,9 +144,11 @@ const StudentProfile = () => {
                 <div className="row gutters">
                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div className="text-right">
-                      <button type="button" className="btn btn-secondary">
-                        Cancel
-                      </button>
+                      <Link to="/">
+                        <button type="button" className="btn btn-secondary">
+                          Cancel
+                        </button>
+                      </Link>
                       <button
                         type="button"
                         className="btn btn-primary"

@@ -1,5 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./form.css";
 
 const RegistrationForm = () => {
@@ -8,9 +11,57 @@ const RegistrationForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log("Form Data:", data);
+    const storedStudents = JSON.parse(localStorage.getItem("clintsData")) || [];
+    const file = data.image[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const student = {
+          id: Date.now(),
+          name: `${data.firstName} ${data.lastName}`,
+          email: data.email,
+          gender: data.gender,
+          mobileNumber: data.mobileNumber,
+          image: reader.result,
+        };
+
+        const updatedStudents = [...storedStudents, student];
+        localStorage.setItem("clintsData", JSON.stringify(updatedStudents));
+
+        toast.success("student add successful", { autoClose: 1500 });
+        setTimeout(() => {
+          navigate("/dash");
+        }, 2000);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      const student = {
+        id: Date.now(),
+        name: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        gender: data.gender,
+        mobileNumber: data.mobileNumber, // Added mobile number
+        image: "",
+      };
+
+      const updatedStudents = [...storedStudents, student];
+      localStorage.setItem("clintsData", JSON.stringify(updatedStudents));
+
+      // Show success toast
+      toast.success("Student added successfully!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+
+      // Redirect after the toast
+      setTimeout(() => {
+        navigate("/dash");
+      }, 3000);
+    }
   };
 
   return (
@@ -55,8 +106,8 @@ const RegistrationForm = () => {
                 className="w-full border rounded p-2"
               >
                 <option value="">Please Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
               </select>
               {errors.gender && (
                 <p className="text-red-500 text-sm">{errors.gender.message}</p>
@@ -83,22 +134,30 @@ const RegistrationForm = () => {
 
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-gray-700">Mobile</label>
+              <label className="block text-gray-700">Upload Image</label>
               <input
-                {...register("studentId", { required: "Mobile is required" })}
+                type="file"
+                {...register("image")}
                 className="w-full border rounded p-2"
               />
-              {errors.studentId && (
+            </div>
+            <div>
+              <label className="block text-gray-700">Mobile Number</label>
+              <input
+                type="number"
+                {...register("mobileNumber", {
+                  required: "Mobile number is required",
+                })}
+                className="w-full border rounded p-2"
+              />
+              {errors.mobileNumber && (
                 <p className="text-red-500 text-sm">
-                  {errors.studentId.message}
+                  {errors.mobileNumber.message}
                 </p>
               )}
             </div>
-            <div>
-              <label className="block text-gray-700">Upload Image</label>
-              <input type="file" className="w-full border rounded p-2" />
-            </div>
           </div>
+
           <button
             type="submit"
             className="button w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition"
@@ -107,6 +166,19 @@ const RegistrationForm = () => {
           </button>
         </form>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </div>
   );
 };

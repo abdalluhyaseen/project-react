@@ -1,7 +1,7 @@
 import React from "react";
 import SidebarICon from "./SidebarICon/SidebarICon";
-import TopCard from "./TopCard/TopCard";
-import Clint from "./clint1/clint";
+import TopCard from "./TopCard/TopCard"; // Import TopCard here
+import Clint from "./clint1/clint"; // Import Clint here
 import Chart from "./chart.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../dashbord.css";
