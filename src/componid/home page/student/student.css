@@ -5,7 +5,9 @@
   background: #f5f6fa;
   position: relative;
   height: 100%;
+
 }
+
 .container8 {
   display: flex;
   justify-content: center;
@@ -60,7 +62,12 @@
   background: #ffffff;
   color: #2e323c;
 }
-
+.btn22 {
+  background-color: #6b2da5;
+  width: 80px;
+  border-radius: 0.375rem;
+  color: white;
+}
 .card {
   background: #ffffff;
   -webkit-border-radius: 5px;

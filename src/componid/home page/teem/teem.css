@@ -12,7 +12,7 @@
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 1px #007dfe;
+  box-shadow: 5px 5px 1px #8a2be2;
   height: 90vh;
 }
 
@@ -29,7 +29,7 @@
 
 .span1 {
   font-size: 50px;
-  color: #007dfe;
+  color: #8a2be2;
   transition: 0.5s;
 }
 .span1:hover {

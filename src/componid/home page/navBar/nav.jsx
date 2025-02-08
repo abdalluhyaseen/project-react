@@ -4,6 +4,7 @@ import "./nav.css";
 import { useTranslation } from "react-i18next";
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { color } from "motion/react";
 function Navbar() {
   const { t, i18n } = useTranslation();
 

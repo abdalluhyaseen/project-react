@@ -151,7 +151,7 @@ const StudentProfile = () => {
                       </Link>
                       <button
                         type="button"
-                        className="btn btn-primary"
+                        className="btn22  "
                         onClick={handleUpdateClick}
                       >
                         Update

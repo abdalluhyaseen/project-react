@@ -31,7 +31,7 @@ function HeroSection() {
           </div>
           <div className="social">
             <a
-              href="www.facebook.com"
+              href="https://www.facebook.com"
               aria-label="Read More and click in my facebook account"
             >
               <MdFacebook
@@ -42,7 +42,7 @@ function HeroSection() {
               />{" "}
             </a>
             <a
-              href="www.instagram.com"
+              href="https://www.instagram.com"
               aria-label="Read More and click in my instagram account"
             >
               <AiFillInstagram
@@ -53,7 +53,7 @@ function HeroSection() {
               />{" "}
             </a>
             <a
-              href="www.twitter.com"
+              href="https://www.twitter.com"
               aria-label="Read More and click in my twitter account"
             >
               <FaTwitter

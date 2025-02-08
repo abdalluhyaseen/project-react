@@ -16,7 +16,7 @@
 }
 
 .single_brief {
-  background-color: #df52d4;
+  background-color: #8a2be2;
   color: #fff;
   padding: 20px;
   margin: 10px;
@@ -26,13 +26,13 @@
   text-align: center;
   border-radius: 10px;
   transition: 1s;
-  box-shadow: 5px 5px 5px #007dfe;
+  box-shadow: 5px 5px 5px #df52d4;
 }
 
 .single_brief:hover {
   transform: scale(1.05);
-  background: #007dfe;
-  box-shadow: 7px 10px 5px #df52d4;
+  background: #df52d4;
+  box-shadow: 7px 10px 5px #8a2be2;
 }
 
 .icon_breif {
@@ -60,6 +60,7 @@
 .pad {
   margin-top: 10px;
 }
+
 
 .single_brief h2 {
   margin-bottom: 5px;
@@ -140,11 +141,9 @@ textarea {
   background-color: #0056b3;
 }
 
-
-
 @media (max-width: 700px) {
   .box_brieff {
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -152,7 +151,7 @@ textarea {
   .single_brief {
     width: 90%;
     margin: 10px 0;
-     margin-top: 80px;
+    margin-top: 80px;
   }
 
   .location-contact {
