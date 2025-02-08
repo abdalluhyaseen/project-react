@@ -4,12 +4,13 @@ import { useTranslation } from "react-i18next";
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../App";
+import { MdDarkMode } from "react-icons/md";
+import { IoSunny } from "react-icons/io5";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const darkModeContext = useDarkMode(); // Get the context
+  const darkModeContext = useDarkMode();
 
-  // Check if darkModeContext is defined before destructuring
   const isDarkMode = darkModeContext ? darkModeContext.isDarkMode : false;
   const toggleDarkMode = darkModeContext
     ? darkModeContext.toggleDarkMode
@@ -69,7 +70,7 @@ function Navbar() {
                 className={`btn ${isDarkMode ? "btn-light" : "btn-dark"}`}
                 onClick={toggleDarkMode}
               >
-                {isDarkMode ? "Light " : "Dark "}
+                {isDarkMode ? <IoSunny /> : <MdDarkMode />}
               </button>
             </li>
             <li className="element">

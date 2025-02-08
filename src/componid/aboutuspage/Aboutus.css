@@ -10,6 +10,12 @@
   width: 100%;
   margin-top: 70px;
 }
+
+.dark-mode .text-center {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
 .about-section {
   color: white;
   width: 100%;
@@ -21,6 +27,11 @@
   background: url("./img/33.jpg") no-repeat center center/cover;
   text-align: center;
 }
+
+.dark-mode .about-section {
+  background: #303030; /* Dark background */
+}
+
 .overlay {
   margin-top: 70px;
 
@@ -91,6 +102,12 @@
   width: 400px;
   height: 250px;
 }
+
+.dark-mode .card22 {
+  background-color: #424242; /* Dark background for cards */
+  color: #ffffff; /* Light text color */
+}
+
 .card22::before {
   content: "";
   position: absolute;
@@ -154,6 +171,11 @@
   width: auto;
   height: 200px;
 }
+
+.dark-mode .card11 {
+  background: #424242; /* Dark background for student cards */
+}
+
 
 .card11 img {
   width: 100px;
