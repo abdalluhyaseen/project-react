@@ -10,7 +10,6 @@
   width: 100%;
   margin-top: 70px;
 }
-
 .about-section {
   color: white;
   width: 100%;
@@ -22,7 +21,6 @@
   background: url("./img/33.jpg") no-repeat center center/cover;
   text-align: center;
 }
-
 .overlay {
   margin-top: 70px;
 
@@ -33,14 +31,12 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
   position: relative;
   z-index: 2;
 }
-
 .about-title::after {
   content: "";
   display: block;
@@ -49,7 +45,6 @@
   background: white;
   margin: 10px auto;
 }
-
 .profile-img {
   position: relative;
   z-index: 2;
@@ -131,19 +126,17 @@
 
 .card22:hover h3,
 .card22:hover p {
-  /* color: #0e3d0b;  */
   transition: color 0.3s ease;
 }
-/*studant*/
 .h3 {
   margin: 30px;
   color: #000;
 }
 .nop {
-  max-width: 80%;
+  max-width: 60%;
   overflow: hidden;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .container11 {
   display: flex;

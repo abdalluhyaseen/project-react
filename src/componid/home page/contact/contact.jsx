@@ -28,7 +28,7 @@ const ContactUsForm = () => {
     <div
       style={{ direction: selectedLanguage === "ar" ? "rtl" : "ltr" }}
       id="Contact"
-      className="contact-us-form"
+      className="contact-us-form22"
     >
       <div className="form-container">
         <div className="form-card">

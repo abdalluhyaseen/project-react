@@ -1,6 +1,9 @@
+/* الوضع العادي (Light Mode) */
 .services-section {
   text-align: center;
   padding: 50px 20px;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .section-title {
@@ -20,7 +23,7 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -42,7 +45,6 @@
   color: #fff;
 }
 
-
 .service-item .icon {
   font-size: 2rem;
   margin-bottom: 15px;
@@ -53,8 +55,31 @@
   margin: 10px 0;
 }
 
+/* الوضع الليلي (Dark Mode) */
+.services-section.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
+.services-section.dark-mode .section-title::after {
+  background: #ffcc00; /* شريط تحت العنوان */
+}
 
+.services-section.dark-mode .service-item {
+  background: #2e2e2e;
+  border-color: #444;
+}
+
+.services-section.dark-mode .service-item:hover {
+  background-color: #444;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.services-section.dark-mode .icon {
+  color: #ffcc00; /* لون الأيقونات في الوضع الليلي */
+}
+
+/* استجابة للشاشات الصغيرة */
 @media (max-width: 1000px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -129,4 +154,3 @@
     font-size: 0.8rem;
   }
 }
-

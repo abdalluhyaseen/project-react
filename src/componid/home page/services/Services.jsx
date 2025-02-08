@@ -1,12 +1,20 @@
 import React from "react";
-import "./Services.css"; 
+import "./Services.css";
 import { useTranslation } from "react-i18next";
-
+import { useDarkMode } from "../../../App"; // استيراد حالة الوضع الليلي
 
 const Services = () => {
   const { t } = useTranslation();
+  const darkModeContext = useDarkMode(); // Get the context
+
+  // Check if darkModeContext is defined before destructuring
+  const isDarkMode = darkModeContext ? darkModeContext.isDarkMode : false;
+
   return (
-    <section id="Services" className="services-section">
+    <section
+      id="Services"
+      className={`services-section ${isDarkMode ? "dark-mode" : ""}`}
+    >
       <h2 className="section-title">{t("services")}</h2>
       <div className="services-grid">
         <div className="service-item active">

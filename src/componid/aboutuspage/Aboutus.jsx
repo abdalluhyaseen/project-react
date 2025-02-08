@@ -76,11 +76,11 @@ function Header() {
       <div className="nop">
         <motion.div
           className="container11"
-          animate={{ x: isHovered ? 0 : "-60%" }}
+          animate={{ x: isHovered ? 0 : "-30%" }}
           transition={{
             x: {
               repeat: Infinity,
-              duration: isHovered ? 7 : 23,
+              duration: isHovered ? 7 : 15,
               ease: "linear",
             },
           }}

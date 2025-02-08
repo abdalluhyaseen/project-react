@@ -147,7 +147,6 @@ const ClintPage = () => {
         </tbody>
       </table>
 
-      {/* Delete Confirmation Modal */}
       <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Delete Confirmation</Modal.Title>

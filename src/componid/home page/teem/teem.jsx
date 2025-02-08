@@ -2,12 +2,16 @@ import React from "react";
 import "./teem.css";
 import Imge1 from "../img/Artificial-Intelligence.png";
 import { useTranslation } from "react-i18next";
+import { useDarkMode } from "../../../App"; // Ensure the correct path for importing the hook
 
 const TeamPage = () => {
   const { t, i18n } = useTranslation();
+  const { isDarkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state
+
   const selectedLanguage = i18n.language;
+
   return (
-    <div className="body-team">
+    <div className={`body-team ${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <div className="container2">
         <img className="img1" src={Imge1} alt="a" />
         <div
@@ -20,6 +24,18 @@ const TeamPage = () => {
           <p className="para">{t("teem-description")}</p>
           <p className="para">{t("teem-description1")}</p>
         </div>
+      </div>
+
+      {/* Dark Mode Toggle Button */}
+      <div className="dark-mode-toggle-container">
+        <button
+          className={`dark-mode-toggle ${
+            isDarkMode ? "btn-light" : "btn-dark"
+          }`}
+          onClick={toggleDarkMode}
+        >
+          {isDarkMode ? "Light Mode" : "Dark Mode"}
+        </button>
       </div>
     </div>
   );

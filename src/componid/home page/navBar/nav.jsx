@@ -1,12 +1,19 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
 import "./nav.css";
 import { useTranslation } from "react-i18next";
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { color } from "motion/react";
+import { useDarkMode } from "../../../App";
+
 function Navbar() {
   const { t, i18n } = useTranslation();
+  const darkModeContext = useDarkMode(); // Get the context
+
+  // Check if darkModeContext is defined before destructuring
+  const isDarkMode = darkModeContext ? darkModeContext.isDarkMode : false;
+  const toggleDarkMode = darkModeContext
+    ? darkModeContext.toggleDarkMode
+    : () => {};
 
   const selectedLanguage = i18n.language;
 
@@ -22,13 +29,13 @@ function Navbar() {
         <div>
           <ul className="centered-components">
             <li className="element">
-              <a href="/">{t("nava")}</a>
+              <Link to="/">{t("nava")}</Link>
             </li>
             <li className="element">
-              <a href="/b"> {t("nava1")} </a>
+              <Link to="/b">{t("nava1")}</Link>
             </li>
             <li className="element">
-              <a href="/c"> {t("nava2")} </a>
+              <Link to="/c">{t("nava2")}</Link>
             </li>
           </ul>
         </div>
@@ -56,6 +63,14 @@ function Navbar() {
                   EN
                 </button>
               )}
+            </li>
+            <li>
+              <button
+                className={`btn ${isDarkMode ? "btn-light" : "btn-dark"}`}
+                onClick={toggleDarkMode}
+              >
+                {isDarkMode ? "Light " : "Dark "}
+              </button>
             </li>
             <li className="element">
               <Link to="/fn">

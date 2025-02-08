@@ -49,8 +49,6 @@ const App = () => {
   const toggleClass = () => {
     setIsActive(!isActive);
   };
-
-  // Sign Up
   const signUpFormik = useFormik({
     initialValues: {
       email: "",
@@ -104,8 +102,6 @@ const App = () => {
       }
     },
   });
-
-  // Login
   const loginFormik = useFormik({
     initialValues: {
       email: "",
@@ -122,12 +118,10 @@ const App = () => {
         (user) =>
           user.email === values.email && user.password === values.password
       );
-
       const teacher = teachers.find(
         (user) =>
           user.email === values.email && user.password === values.password
       );
-
       if (student) {
         localStorage.setItem(
           "studentProfile",
@@ -141,7 +135,7 @@ const App = () => {
         );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/fn"); 
+          Navigate("/fn");
         }, 2000);
       } else if (teacher) {
         localStorage.setItem(
@@ -151,26 +145,24 @@ const App = () => {
             firstName: teacher.firstName,
             lastName: teacher.lastName,
             phone: teacher.number,
-            profileImage: "https://www.example.com/default-profile.jpg", 
+            profileImage: "https://www.example.com/default-profile.jpg",
           })
         );
         toast.success("Welcome", { autoClose: 1500 });
         setTimeout(() => {
-          Navigate("/dash"); 
+          Navigate("/dash");
         }, 2000);
       } else {
         toast.error("Invalid email or password!");
       }
     },
   });
-
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
     if (storedUser) {
       setRegisteredUser(storedUser);
     }
   }, []);
-
   return (
     <div className="body22">
       <div className={`container7 ${isActive ? "active" : ""}`} id="container">
@@ -250,7 +242,6 @@ const App = () => {
             <button type="submit">Sign Up</button>
           </form>
         </div>
-
         <div className="form-container7 sign-in">
           <form onSubmit={loginFormik.handleSubmit}>
             <h1>Login</h1>
@@ -279,7 +270,6 @@ const App = () => {
             <button type="submit">Login</button>
           </form>
         </div>
-
         <div className="toggle-container7">
           <div className="toggle">
             <div className="toggle-panel toggle-left">
@@ -303,5 +293,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;

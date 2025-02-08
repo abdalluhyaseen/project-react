@@ -1,8 +1,10 @@
+/* General light mode styles */
 .body-team {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: all 0.5s ease;
 }
 
 .container2 {
@@ -32,57 +34,58 @@
   color: #8a2be2;
   transition: 0.5s;
 }
+
 .span1:hover {
   transform: scale(1.05);
 }
 
-.team {
-  font-size: 25px;
-  line-height: 1.6;
-}
 .para {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   line-height: 1.6;
 }
-@media (max-width: 1400px) {
-  .container2 {
-    flex-direction: column;
-    height: auto;
-    width: 90%;
-    padding: 20px;
-  }
 
-  .img1,
-  .text-content {
-    width: 100%;
-  }
-
-  .span1 {
-    font-size: 48px;
-  }
-
-  .team {
-    font-size: 24px;
-  }
-
-  .para {
-    font-size: 14px;
-  }
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
 }
-@media (max-width: 900px) {
-  .span1 {
-    font-size: 46px;
-  }
 
-  .team {
-    font-size: 23px;
-  }
+.dark-mode .container2 {
+  background-color: #2c2c2c;
+  box-shadow: 5px 5px 1px #8a2be2;
+}
 
-  .para {
-    font-size: 13px;
-  }
+.dark-mode .span1 {
+  color: #8a2be2;
+}
+
+.dark-mode .para {
+  color: #ddd;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8a2be2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #7a1db2;
+}
+
+.dark-mode-toggle.btn-light {
+  background-color: #4caf50;
+}
+
+.dark-mode-toggle.btn-dark {
+  background-color: #f44336;
 }
 
 @media (max-width: 800px) {
@@ -90,100 +93,26 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
   .container2 {
     flex-direction: column;
     height: auto;
     width: 90%;
     padding: 15px;
   }
+
   .img1 {
     height: 200px;
     width: 200px;
-  }
-
-  .text-content {
-    width: 100%;
   }
 
   .span1 {
     font-size: 45px;
   }
 
-  .team {
-    font-size: 22px;
-  }
-
   .para {
     font-size: 14px;
   }
 }
 
-@media (max-width: 700px) {
-  .span1 {
-    font-size: 40px;
-  }
-
-  .team {
-    font-size: 20px;
-  }
-
-  .para {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 600px) {
-  .span1 {
-    font-size: 35px;
-  }
-
-  .team {
-    font-size: 18px;
-  }
-
-  .para {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 500px) {
-  .span1 {
-    font-size: 30px;
-  }
-
-  .team {
-    font-size: 16px;
-  }
-
-  .para {
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 400px) {
-  .span1 {
-    font-size: 25px;
-  }
-
-  .team {
-    font-size: 14px;
-  }
-
-  .para {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 300px) {
-  .span1 {
-    font-size: 20px;
-  }
-
-  .team {
-    font-size: 12px;
-  }
-
-  .para {
-    font-size: 9px;
-  }
-}
+/* Additional media queries for smaller screen sizes as needed */

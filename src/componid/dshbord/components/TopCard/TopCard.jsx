@@ -34,7 +34,6 @@ const TopCard = () => {
             <p className="text-secondary m-0">Total Teachers</p>
           </div>
           <div className="h-100 d-flex justify-content-center align-items-center">
-            <span className="h-100 bg-success bg-opacity-25 text-success d-flex align-items-center flex-fill p-3 rounded-3 fs-5"></span>
           </div>
         </div>
         <div className="bg-body p-3 rounded-3 d-flex justify-content-between">
@@ -43,7 +42,6 @@ const TopCard = () => {
             <p className="text-secondary m-0">Total Students</p>
           </div>
           <div className="h-100 d-flex justify-content-center align-items-center">
-            <span className="h-100 bg-success bg-opacity-25 text-success d-flex align-items-center flex-fill p-3 rounded-3 fs-5"></span>
           </div>
         </div>
         <div className="bg-body p-3 rounded-3 d-flex justify-content-between">
@@ -52,7 +50,6 @@ const TopCard = () => {
             <p className="text-secondary m-0">Girls</p>
           </div>
           <div className="h-100 d-flex justify-content-center align-items-center">
-            <span className="h-100 bg-success bg-opacity-25 text-success d-flex align-items-center flex-fill p-3 rounded-3 fs-5"></span>
           </div>
         </div>
         <div className="bg-body p-3 rounded-3 d-flex justify-content-between">
@@ -61,7 +58,6 @@ const TopCard = () => {
             <p className="text-secondary m-0">Boys</p>
           </div>
           <div className="h-100 d-flex justify-content-center align-items-center">
-            <span className="h-100 bg-success bg-opacity-25 text-success d-flex align-items-center flex-fill p-3 rounded-3 fs-5"></span>
           </div>
         </div>
       </div>

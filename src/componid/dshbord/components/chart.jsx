@@ -33,8 +33,8 @@ const BarChart = () => {
         {
           label: "Sales",
           data: [65, 59, 80, 81, 56],
-          backgroundColor: "rgba(75, 192, 192, 0.3)",
-          borderColor: "rgba(32, 201, 151, 0.5)",
+          backgroundColor: "#8a2be2",
+          borderColor: "#8a2be2",
           borderWidth: 1,
         },
       ],
@@ -58,8 +58,8 @@ const BarChart = () => {
   return (
     <div className="Chart bg-body p-3 rounded-3">
       <div className="d-flex justify-content-between text-success">
-        <h4>Chart</h4>
-        <span className="fs-4">
+        <h4 style={{ color: "#8a2be2" }}>Chart</h4>
+        <span style={{ color: "#8a2be2" }} className="fs-4">
           <BsBarChartLineFill />
         </span>
       </div>
